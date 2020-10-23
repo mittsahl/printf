@@ -1,6 +1,9 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 
+#include <stdarg.h>
+#include <stdlib.h>
+
 /**
  * funcStruct - struct with pointer to a char 
  * @s: pointer to character

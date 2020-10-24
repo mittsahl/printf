@@ -13,7 +13,7 @@
 typdef struct funcStruct
 {
 	char *s;
-	char *matchedFunction(va_list args);
+	char *(*func)(va_list);
 } funcStruct;
 
 int _putchar(char c);

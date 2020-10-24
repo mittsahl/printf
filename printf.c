@@ -23,4 +23,20 @@ int _printf(const char *format, ...)
         //}
         printf("\n");
         va_end(list);
+
+	//Place this in the op_function file
+	char* itoa(int val, int base){
+
+	    static char buf[32] = {0};
+
+	    int i = 30;
+    
+	    for(; val && i ; --i, val /= base){
+		printf("val %d i %d base %d\n", val, i, base);
+		buf[i] = "0123456789ABCDEF"[val % base];
+	    }
+
+	    return &buf[i+1];
+
+	}
 }

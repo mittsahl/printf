@@ -7,38 +7,20 @@ int _printf(const char *format, ...)
         va_list list;
 
         va_start(list, format);
-        while (*(format + willy) != '\0' && (format))
-        {
-                switch (*(format + willy))
-                {
-                        case 's':
-                                string = va_arg(list, char *);
-                                if (string == NULL)
-                                {
-                                        printf("(nil)");
-                                        break;
-                                }
-                                printf("%s", string);
-                                break;
-                        case 'i':
-                                printf("%d", va_arg(list, int));
-                                break;
-                        case 'f':
-                                /* Float is promoted to double */
-                                printf("%f", va_arg(list, double));
-                                break;
-                        case 'c':
-                                /* Char is promoted to int */
-                                printf("%c", (char) va_arg(list, int));
-                                break;
-                        default:
-                                willy++;
-                                continue;
-                }
-                if (*(format + willy + 1) != '\0')
-                        printf(", ");
-                willy++;
-        }
+        //while (*(format + willy) != '\0' && (format))
+        //{
+                        funcStruct array[] = {
+				{"s", op_string},
+				{"i", op_int},
+				{"d", op_int},
+				{"u", op_unsignedInt},
+				{"o", op_octal},
+				{"x", op_unsignedHex},
+				{"c", op_char},
+				{"p", op_pointer},
+				{"%", op_percent},
+				{NULL, NULL}};
+        //}
         printf("\n");
         va_end(list);
 }

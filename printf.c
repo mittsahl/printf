@@ -10,14 +10,13 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	while (*(format + i))
 	{
-		if (*format + i) != '%')
-		
+		if (*(format + i) != '%')
+			buf[i] = *(format + i);		
 		if (*(format + i) == '%')
 		{	
 			function = get_op_func((format + i + 1));
 			str = function(args);
-			buf = str_concat(buf, str);		
-			_puts(buf);
+			buf = str_concat(buf, str);
 		}
 		i++;
 	}		

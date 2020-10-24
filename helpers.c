@@ -97,7 +97,7 @@ char *str_concat(char *s1, char *s2)
 * @num: Given decimal number
 * @base: What base to convert to (16 or 8)
 * Return: A buffer conatining conversion
-**/
+
 char* itoa(int num, int base)
 {
 	static char buf[16] = {0};
@@ -109,6 +109,6 @@ char* itoa(int num, int base)
 		buf[a] = "0123456789ABCDEF" [val % base];
 	}
 	return &buf[i + 1];
-}
+} */
 
 

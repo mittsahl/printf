@@ -25,7 +25,9 @@ void _puts(char *str);
 char *_strcpy(char *dest, char *src);
 char *str_concat(char *s1, char *s2);
 char *_strcat(char *dest, char *src);
+int _strlen(char *s);
 char *(*get_op_func(const char *s))(va_list);
 int _printf(const char *format, ...);
 char *op_string(va_list args);
+char *op_reverse(va_list args);
 #endif

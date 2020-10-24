@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 int _printf(const char *format, ...)
 {
@@ -16,7 +17,8 @@ int _printf(const char *format, ...)
 		{	
 			function = get_op_func((format + i + 1));
 			str = function(args);
-			buf = str_concat(buf, str);
+			_strcat(buf, str);
+			i++;
 		}
 		i++;
 	}		

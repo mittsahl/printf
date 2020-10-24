@@ -12,10 +12,12 @@ char *op_string(va_list args)
 	return (string);
 }
 
-char *op_int(va_list args)
+char *op_reverse(va_list args)
 {
-
+	char *string = va_arg(args, char *);
+	char *str = malloc(_strlen(string));
+		
+	_strcpy(str, string);
+	rev_string(str);
+	return(str);	
 }
-
-
-

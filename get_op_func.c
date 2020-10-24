@@ -7,7 +7,7 @@
  * Return: pointer to appropriate function
  */
 
-char *(*get_op_func(char *s))(va_list)
+char *(*get_op_func(const char *s))(va_list)
 {
 
 	funcStruct array[] = {
@@ -24,7 +24,7 @@ char *(*get_op_func(char *s))(va_list)
 	{NULL, NULL}
 	};
 
-	int i;
+	int i = 0;
 
 	while (*(array + i)->letter)
 	{

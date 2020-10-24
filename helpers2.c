@@ -22,18 +22,7 @@ char *_strcat(char *dest, char *src)
 
 }
 
-/**
- * itoa - changes and int to a string
- * @num: int passed int
- * @str: where the string will end 
- * @base: base of the conversion
- * Return: string
- */
 
-char *itoa(int num, char *str, int base)
-{
-	
-}
 #include "holberton.h"
 #include <stdio.h>
 

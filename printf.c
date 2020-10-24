@@ -20,6 +20,8 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}		
+	_puts(buf);
+	free(buf);
 	va_end(args);
 	return (0);
 }

@@ -28,6 +28,7 @@ char *_strcat(char *dest, char *src);
 int _strlen(char *s);
 char *(*get_op_func(const char *s))(va_list);
 int _printf(const char *format, ...);
+void rev_string(char *s);
 char *op_string(va_list args);
 char *op_reverse(va_list args);
 #endif

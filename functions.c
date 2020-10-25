@@ -23,9 +23,9 @@ char *op_reverse(va_list args)
 }
 
 /**
- * op_int - takes in an int and returns as a string
+ * op_int - takes in an int (should take in va_list args) and returns as a string
  * @args: arglist from main function
- * Return: String (returns int for now)
+ * Return: String
  */
 char* op_int(int a)
 {

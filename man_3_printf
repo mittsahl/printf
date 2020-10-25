@@ -1,0 +1,48 @@
+.\" Manpage for modified printf
+.\" Contact Google.com for more information
+.TH man 1 "10/25/2020" "1.0" "_printf man page
+.SH NAME
+_printf \- Takes in args and outputs to a buffer
+.SH SYNOPSIS
+_printf(const char *format, ...);
+.SH DESCRIPTION
+Takes in an input and outputs one of the following formats below.
+.SH FORMAT
+.br
+%c	Prints a character.
+.br
+.br
+%s	Prints a string.
+.br
+.br
+%u	Prints an unsigned integer.
+.br
+.br
+%d	Prints an unsigned integer.
+.br
+.br
+%o	Prints an unsigned ocatal integer (base 8).
+.br
+.br
+%x	Prints an unsiged hexadecimal (base 16).
+.br
+.br
+%p	Prints a pointer address.
+.br
+.br
+%%	Prints a %.
+.br
+.br
+%r	Prints string in reversed order.
+.br
+
+.SH OPTIONS
+_printf() does not take in any options
+.SH AUTHORS
+Matthew Salem and Jonathan Wang
+.SH REPORTING BUGS
+Report bugs at https://support.holbertonschool.com/hc/en-us/requests/new
+.SH COPYRIGHT
+Free to anyone with our hearts
+.SH SEE ALSO
+printf(1), Google.com

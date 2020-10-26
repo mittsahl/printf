@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * get_op_func - function that returns a pointer to a function
@@ -9,7 +10,7 @@
 
 char *(*get_op_func(const char *s))(va_list)
 {
-
+	printf("enterd get op");
 	funcStruct array[] = {
 	{"s", op_string},
 	/*{"i", op_int},
@@ -24,12 +25,18 @@ char *(*get_op_func(const char *s))(va_list)
 	{NULL, NULL}
 	};
 
-	int i = 0;
 
+	int i = 0;
+	
+	printf("%s", *(array + i)->letter);
 	while (*(array + i)->letter)
 	{
 		if (*(array + i)->letter == *s)
+		{
+			printf("%c", *(array + i)->letter);
 			break;
+		}
+		printf("%c", *(array + i)->letter);
 		i++;
 	}
 	return (*(array + i)->func);

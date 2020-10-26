@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	char *string = "This is a test string";
-	_printf("This string is to test: %s\nReversed: %r", string, string);
+	char *string = "Works";
+	_printf("%s", string);
 	return (0);
 }	

@@ -91,7 +91,7 @@ char *str_concat(char *s1, char *s2)
 	_strcpy(middle, s2);
 	return (concat);
 }
-
+/*
 char* itoa(int num, int base)
 {
         static char buf[16] = {0};
@@ -103,4 +103,4 @@ char* itoa(int num, int base)
                 buf[a] = "0123456789ABCDEF" [num % base];
         }
         return &buf[a + 1];
-}
+}*/

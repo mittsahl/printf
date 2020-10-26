@@ -4,27 +4,32 @@
 int _printf(const char *format, ...)
 {
         va_list args;
-	int i,j = 0;
+	int i = 0;
+	int j = 0;
+	const char *w = "s";
 	char *str;
 	char *(*function)(va_list);
 	char *buf = malloc(MAX_BUF_SIZE);
 	va_start(args, format);
-	while (*(format + i))
+	
+	for (i = 0; format[i] != '\0'; i++)
 	{
-		for (; buf[j]; j++)
-			;
-		if (*(format + i) != '%')
-			buf[j] = *(format + i);		
-		if (*(format + i) == '%')
-		{	
-			function = get_op_func((format + i + 1));
-			str = function(args);
-			_strcat(buf, str);
-			i++;
+		if (format[i] != '%')
+		{
+			buf[j] = format[i];
 		}
-		i++;
-	}		
-	_puts(buf);
+		if (format[i] == '%')
+		{	
+			//printf("char is: %c\n", (format + i + 1));
+			function = get_op_func(w);
+			//str = function(args);
+			//_strcat(buf, str);
+			continue;
+		}
+		j++;
+		//printf("buf: %s\n",buf);
+	}			
+	//printf("buf: %s\n",buf);
 	free(buf);
 	va_end(args);
 	return (0);

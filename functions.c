@@ -27,7 +27,8 @@ char *op_reverse(va_list args)
  * @args: arglist from main function
  * Return: String
  */
+/*
 char* op_int(int a)
 {
 	return (itoa(a,10));
-}
+}*/

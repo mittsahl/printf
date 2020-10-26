@@ -3,6 +3,7 @@
 int main(void)
 {
 	int num = 12345;
+	_printf("%r", "Reverse this string");
 	_printf("Testing\n");
 	printf("Testing\n");
 	_printf("%s\n", "test");
@@ -19,5 +20,7 @@ int main(void)
 	printf("%u\n", UINT_MAX);	
 	_printf("%o\n", num);
 	printf("%o\n", num);
+	_printf("%x\n", num);
+	printf("%x\n", num);
 	return (0);
 }

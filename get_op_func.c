@@ -15,8 +15,8 @@ char *(*get_op_func(const char s))(va_list)
 	{"d", op_int},
 	{"u", op_unsignedInt}, 
 	{"o", op_octal}, 
-/*	{"x", op_unsignedHex},
-	{"c", op_char},
+	{"x", op_unsignedHex},
+/*	{"c", op_char},
 	{"p", op_pointer},*/ 
 	{"r", op_reverse},
 /*	{"%", op_percent},*/
@@ -26,15 +26,12 @@ char *(*get_op_func(const char s))(va_list)
 
 	int i = 0;
 	
-	//printf("%s", *(array + i)->letter);
 	while (*(array + i)->letter)
 	{
 		if (*(array + i)->letter == s)
 		{
-			//printf("%c", *(array + i)->letter);
 			break;
 		}
-		//printf("%c\n", *(array + i)->letter);
 		i++;
 	}
 	return (*(array + i)->func);

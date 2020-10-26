@@ -47,9 +47,10 @@ char *op_unsignedInt(va_list args)
 	char *numstring =  utoa(num, 10);
 	return (numstring);
 }
-/*char *op_unsignedHex(va_list args)
+
+char *op_unsignedHex(va_list args)
 {
-	int num = va_arg(args, int);
-	
+	unsigned int num = va_arg(args, unsigned int);
+	char *numstring = utoa(num, 16);
 	return (numstring);
-} */
+}

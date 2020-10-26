@@ -36,8 +36,8 @@ char *op_int(va_list args)
 
 char *op_octal(va_list args)
 {
-	int num = va_arg(args, int);
-	char *numstring = itoa(num, 8);
+	unsigned int num = va_arg(args, unsigned int);
+	char *numstring = utoa(num, 8);
 	return (numstring);
 }
 

@@ -129,6 +129,16 @@ char *op_pointer(va_list args)
 
 char *op_percent(va_list args)
 {
+	args = args;
 	char *string = "%";
 	return (string);
+}
+
+char *op_rot13(va_list args)
+{
+	char *string = va_arg(args, char *);
+	char *str = malloc(_strlen(string));
+	_strcpy(str, string);
+	rot13(str);
+	return (str);
 }

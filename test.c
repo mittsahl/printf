@@ -10,8 +10,8 @@ int main(void)
 	_printf("%r\n\n", "Reverse this string");
 	_printf("Testing : Testing\n");
 	printf("Expected: Testing\n\n");
-	_printf("Testing : Char %c asdf\n", 'c');
-	printf("Expected: Char %c asdf\n\n", 'c');
+	_printf("Testing : Char %c asdf\n", c);
+	printf("Expected: Char %c asdf\n\n", c);
 	_printf("Testing : %s\n", "test");
 	printf("Expected: %s\n\n", "test");
 	_printf("Testing : This is a %s\n", "test for before");
@@ -34,7 +34,8 @@ int main(void)
 	printf("Expected: Pointer to num: %p\n\n", (void *)pointer);
 	_printf("Testing : Percent: %%\n");
 	printf("Expected: Percent: %%\n\n");
-	_printf("Testing : %s %p %x %X %d\n", s, num, num, num, neg);
-	 printf("Expected: %s %p %x %X %d\n\n", s, num, num, num, neg);
-	return (0);
+	_printf("Testing : %s %p %x %X %d\n", s, &num, num, num, neg);
+	 printf("Expected: %s %p %x %X %d\n\n", s, (void *)&num, num, num, neg);
+	_printf("%R\n", "string");
+	 return (0);
 }

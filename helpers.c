@@ -164,3 +164,29 @@ char *utoaCap(unsigned int num, unsigned int base)
 	}
 	return &buf[a + 1];
 }
+
+/**
+*rot13 - encode in rot3
+*Return: rot13'd string
+*@a: string
+*/
+char *rot13(char *a)
+{
+	int i = 0, j;
+	char *string1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char *string2= "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+
+	while (*(a + i) != 0)
+	{
+		for (j = 0; j < 52; j++)
+		{
+			if (a[i] == string1[j])
+			{
+				a[i] = string2[j];
+				break;
+			}
+		}
+		i++;
+	}
+	return (a);
+}

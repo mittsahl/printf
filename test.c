@@ -3,6 +3,6 @@
 int main(void)
 {
 	char *string = "Works";
-	_printf("%s", string);
+	_printf("This %s fine.", string);
 	return (0);
 }	

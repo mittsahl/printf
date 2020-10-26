@@ -8,9 +8,8 @@
  * Return: pointer to appropriate function
  */
 
-char *(*get_op_func(const char *s))(va_list)
+char *(*get_op_func(const char s))(va_list)
 {
-	printf("enterd get op");
 	funcStruct array[] = {
 	{"s", op_string},
 	/*{"i", op_int},
@@ -28,15 +27,15 @@ char *(*get_op_func(const char *s))(va_list)
 
 	int i = 0;
 	
-	printf("%s", *(array + i)->letter);
+	//printf("%s", *(array + i)->letter);
 	while (*(array + i)->letter)
 	{
-		if (*(array + i)->letter == *s)
+		if (*(array + i)->letter == s)
 		{
-			printf("%c", *(array + i)->letter);
+			//printf("%c", *(array + i)->letter);
 			break;
 		}
-		printf("%c", *(array + i)->letter);
+		//printf("%c\n", *(array + i)->letter);
 		i++;
 	}
 	return (*(array + i)->func);

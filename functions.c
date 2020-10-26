@@ -30,7 +30,7 @@ char *op_reverse(va_list args)
 char *op_int(va_list args)
 {
 	int num = va_arg(args, int);
-	char *numstring = itoa(num ,10);
+	char *numstring = itoa(num, 10);
 	return (numstring);
 }
 

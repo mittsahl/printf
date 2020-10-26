@@ -20,7 +20,7 @@ char *(*get_op_func(const char s))(va_list)
 /*	{"c", op_char}, */
 	{"p", op_pointer}, 
 	{"r", op_reverse},
-/*	{"%", op_percent},*/
+	{"%", op_percent},
 	{NULL, NULL}
 	};
 

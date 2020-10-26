@@ -42,4 +42,5 @@ char* utoa(unsigned int num, unsigned int base);
 char* ultoa(unsigned long int num, unsigned long int base);
 char *utoaCap(unsigned int num, unsigned int base);
 char *op_unsignedHexCap(va_list args);
+char *op_percent(va_list args);
 #endif

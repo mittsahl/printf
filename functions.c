@@ -111,9 +111,9 @@ char *op_pointer(va_list args)
 	_strcat(together, numstring);
 	return (together);
 }
-/*
+
 char *op_percent(va_list args)
 {
 	char *string = "%";
 	return (string);
-}*/
+}

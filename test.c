@@ -29,6 +29,8 @@ int main(void)
 	printf("Expected: %X\n\n", num);
 	_printf("Testing : Pointer to num: %p\n", pointer);
 	printf("Expected: Pointer to num: %p\n\n", (void *)pointer);
+	_printf("Testing : Percent: %%\n");
+	printf("Expected: Percent: %%\n\n");
 	_printf("Testing : %s %p %x %X %d\n", s, num, num, num, neg);
 	 printf("Expected: %s %p %x %X %d\n\n", s, num, num, num, neg);
 	return (0);

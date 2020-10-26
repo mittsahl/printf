@@ -30,5 +30,7 @@ char *(*get_op_func(const char s))(va_list);
 void rev_string(char *s);
 char *op_string(va_list args);
 char *op_reverse(va_list args);
+char *op_int(va_list args);
 int _printf(const char *format, ...);
+char* itoa(int num, int base);
 #endif

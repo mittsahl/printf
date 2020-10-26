@@ -2,7 +2,7 @@
 #include <stdio.h>
 int main(void)
 {
-	int num = 12345;
+	int num = 18273748;
 	int *pointer = &num;
 	_printf("%r", "Reverse this string");
 	_printf("Testing\n");
@@ -23,6 +23,8 @@ int main(void)
 	printf("%o\n", num);
 	_printf("%x\n", num);
 	printf("%x\n", num);
+	_printf("%X\n", num);
+	printf("%X\n", num);
 	_printf("Pointer to num: %p\n", pointer);
 	printf("Real pointer to num: %p\n", (void *)pointer);
 	return (0);

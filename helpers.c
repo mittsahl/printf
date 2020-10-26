@@ -127,7 +127,7 @@ char* utoa(unsigned int num, unsigned int base)
 		for(; (num && a) > 0; --a, num /= base)
         	{
                 	//Will output the right symbol at given base
-                	buf[a] = "0123456789ABCDEF" [num % base];
+                	buf[a] = "0123456789abcdef" [num % base];
         	}
 	}
 	return &buf[a + 1];
@@ -149,3 +149,18 @@ char* ultoa(unsigned long int num, unsigned long int base)
 	}
 	return &buf[a + 1];
 }	
+char *utoaCap(unsigned int num, unsigned int base)
+{
+        static char buf[16] = {0};
+        int a = 30;
+
+        if (num > 0)
+	{
+		for(; (num && a) > 0; --a, num /= base)
+        	{
+                	//Will output the right symbol at given base
+                	buf[a] = "0123456789ABCDEF" [num % base];
+        	}
+	}
+	return &buf[a + 1];
+}

@@ -48,6 +48,14 @@ char *op_unsignedInt(va_list args)
 	return (numstring);
 }
 
+char *op_unsignedHexCap(va_list args)
+{
+        unsigned int num = va_arg(args, unsigned int);
+        char *numstring = utoaCap(num, 16);
+        return (numstring);
+}
+
+
 char *op_unsignedHex(va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);

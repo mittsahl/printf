@@ -54,3 +54,13 @@ char *op_unsignedHex(va_list args)
 	char *numstring = utoa(num, 16);
 	return (numstring);
 }
+char *op_pointer(va_list args)
+{
+	unsigned int num = va_arg(args, unsigned int);
+	char *numstring = utoa(num, 16);
+	char *pointer = "0x";
+	char *together = malloc(_strlen(numstring) + 2);
+	_strcpy(together, pointer);
+	_strcat(together, numstring);
+	return (together);
+}

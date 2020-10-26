@@ -27,8 +27,8 @@ int _printf(const char *format, ...)
 				j++;
 			continue;
 		}
-		j++;
 		//printf("buf: %s\n",buf);
+		j++;
 	}			
 	printf("buf: %s\n",buf);
 	free(buf);

@@ -10,6 +10,7 @@ int main(void)
 	_printf("Integer i: %i\n", num);
 	_printf("Integer d: %d\n", num);
 	_printf("Negative Int: %d\n", -12345);
-	
+	_printf("%u\n", UINT_MAX);
+	printf("%u\n", UINT_MAX);	
 	return (0);
 }

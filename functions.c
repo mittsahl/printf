@@ -41,12 +41,15 @@ char *op_octal(va_list args)
 	return (numstring);
 }
 
-char *op_unsignedHex(va_list args)
+char *op_unsignedInt(va_list args)
+{
+	unsigned int num = va_arg(args, unsigned int);
+	char *numstring =  utoa(num, 10);
+	return (numstring);
+}
+/*char *op_unsignedHex(va_list args)
 {
 	int num = va_arg(args, int);
 	
-	if (num < 0)
-		num = UINT_MAX + (num + 1);
-	char *numstring = itoa(num, 10);
 	return (numstring);
-}
+} */

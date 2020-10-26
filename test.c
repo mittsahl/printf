@@ -3,7 +3,9 @@
 int main(void)
 {
 	int num = 18273748;
+	int neg = -123;
 	int *pointer = &num;
+	char *s = "Holberton";
 	_printf("%r", "Reverse this string");
 	_printf("Testing\n");
 	printf("Testing\n");
@@ -18,7 +20,7 @@ int main(void)
 	_printf("Negative Int: %d\n", -12345);
 	printf("Negative Int: %d\n", -12345);
 	_printf("%u\n", UINT_MAX);
-	printf("%u\n", UINT_MAX);	
+	printf("%u\n", UINT_MAX);
 	_printf("%o\n", num);
 	printf("%o\n", num);
 	_printf("%x\n", num);
@@ -27,5 +29,8 @@ int main(void)
 	printf("%X\n", num);
 	_printf("Pointer to num: %p\n", pointer);
 	printf("Real pointer to num: %p\n", (void *)pointer);
+	printf("\n");
+	_printf("Testing : %s %p %x %X %d\n", s, num, num, num, neg);
+	 printf("Expected: %s %p %x %X %d\n", s, num, num, num, neg);
 	return (0);
 }

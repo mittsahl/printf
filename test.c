@@ -23,7 +23,7 @@ int main(void)
 	printf("%o\n", num);
 	_printf("%x\n", num);
 	printf("%x\n", num);
-	printf("Pointer to num: %p\n", pointer);
-	printf("Real pointer to num: %p\n", pointer);
+	_printf("Pointer to num: %p\n", pointer);
+	printf("Real pointer to num: %p\n", (void *)pointer);
 	return (0);
 }

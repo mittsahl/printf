@@ -39,4 +39,5 @@ int _printf(const char *format, ...);
 char* itoa(int num, int base);
 char *op_pointer(va_list args);
 char* utoa(unsigned int num, unsigned int base);
+char* ultoa(unsigned long int num, unsigned long int base);
 #endif

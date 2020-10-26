@@ -27,8 +27,26 @@ char *op_reverse(va_list args)
  * @args: arglist from main function
  * Return: String
  */
-/*
-char* op_int(int a)
+char *op_int(va_list args)
 {
-	return (itoa(a,10));
-}*/
+	int num = va_arg(args, int);
+	char *numstring = itoa(num ,10);
+	return (numstring);
+}
+
+char *op_octal(va_list args)
+{
+	int num = va_arg(args, int);
+	char *numstring = itoa(num, 8);
+	return (numstring);
+}
+
+char *op_unsignedHex(va_list args)
+{
+	int num = va_arg(args, int);
+	
+	if (num < 0)
+		num = UINT_MAX + (num + 1);
+	char *numstring = itoa(num, 10);
+	return (numstring);
+}

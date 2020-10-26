@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
                 {
                         function = get_op_func(*(format + i + 1));
                         str = function(args);
-                        _strcpy(buf, str);
+                        _strcat(buf, str);
                         i++;
                         while (buf[j])
                         {

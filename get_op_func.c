@@ -10,7 +10,6 @@
 
 char *(*get_op_func(const char s))(va_list)
 {
-	printf("enterd get op\n");
 	funcStruct array[] = {
 	{"s", op_string},
 	/*{"i", op_int},

@@ -13,21 +13,26 @@ int _printf(const char *format, ...)
 	
 	for (i = 0; format[i] != '\0'; i++)
 	{
+		//Edge cases
+		if (format[i] == '\0')
+			return (-1);
+		//Increase both if it is a char
 		if (format[i] != '%')
-		{
 			buf[j] = format[i];
-		}
-		else if (format[i] == '%')
+		//get_op_func if it is a %
+		if (format[i] == '%')
 		{	
-			function = get_op_func('s');
+			printf("buf before strcat: %s\n", buf);
+			function = get_op_func(*(format + i + 1));
 			str = function(args);
 			_strcat(buf, str);
 			i++;
+			
+			printf("buf after strcat: %s\n", buf);
 			while (buf[j] != '\0')
 				j++;
 			continue;
 		}
-		//printf("buf: %s\n",buf);
 		j++;
 	}			
 	printf("buf: %s\n",buf);

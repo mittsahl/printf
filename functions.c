@@ -1,6 +1,21 @@
 #include "holberton.h"
 
 /**
+ * op_string - returns char from va-list
+ * @args: arglist from main function
+ * Return: String
+ */
+char *op_char(va_list args)
+{
+	char string = va_arg(args, int);
+	char *pointer = malloc(2);
+	pointer[0] = string;
+	pointer[1] = '\0';
+
+	return (pointer);
+}
+
+/**
  * op_string - returns string from va-list
  * @args: arglist from main function
  * Return: String

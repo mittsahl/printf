@@ -6,9 +6,12 @@ int main(void)
 	int neg = -123;
 	int *pointer = &num;
 	char *s = "Holberton";
+	char c = 'd';
 	_printf("%r\n\n", "Reverse this string");
 	_printf("Testing : Testing\n");
 	printf("Expected: Testing\n\n");
+	_printf("Testing : Char %c asdf\n", 'c');
+	printf("Expected: Char %c asdf\n\n", 'c');
 	_printf("Testing : %s\n", "test");
 	printf("Expected: %s\n\n", "test");
 	_printf("Testing : This is a %s\n", "test for before");

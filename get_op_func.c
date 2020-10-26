@@ -17,7 +17,7 @@ char *(*get_op_func(const char s))(va_list)
 	{"o", op_octal}, 
 	{"X", op_unsignedHexCap},
 	{"x", op_unsignedHex},
-/*	{"c", op_char}, */
+	{"c", op_char},
 	{"p", op_pointer}, 
 	{"r", op_reverse},
 	{"%", op_percent},

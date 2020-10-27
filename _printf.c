@@ -20,7 +20,11 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '\0')
+			{
+				length = _strlen(buf);
+				write(1, buf, length);
 				return (-1);
+			}
 			function = get_op_func(*(format + i + 1));
 			if (!function)
 				return (-1);

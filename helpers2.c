@@ -22,10 +22,6 @@ char *_strcat(char *dest, char *src)
 
 }
 
-
-#include "holberton.h"
-#include <stdio.h>
-
 /**
  * rev_string - reverses a string
  * Return: void

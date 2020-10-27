@@ -25,6 +25,8 @@ int _printf(const char *format, ...)
 				write(1, buf, length);
 				return (-1);
 			}
+			while (format[i + 1] == ' ')
+				i++;
 			function = get_op_func(*(format + i + 1));
 			if (!function)
 				return (-1);

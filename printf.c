@@ -17,6 +17,8 @@ int _printf(const char *format, ...)
 	char *buf = malloc(MAX_BUF_SIZE);
 
 	va_start(args, format);
+	if (args == NULL)
+		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')

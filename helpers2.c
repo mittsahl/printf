@@ -54,10 +54,11 @@ void rev_string(char *s)
 void handleBuf(char *buf)
 {
 	int bufPos = 0;
+
 	while (buf[bufPos])
 	{
 		buf[bufPos] = '\0';
 		bufPos++;
-	}	
+	}
 	free(buf);
 }

@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 				return (-1);
 			function = get_op_func(*(format + i + 1));
 			if (!function)
-			       return (-1);	
+				return (-1);
 			str = function(args);
 			_strcat(buf, str);
 			i++;

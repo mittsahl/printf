@@ -47,8 +47,9 @@ void rev_string(char *s)
 }
 
 /**
- * handleBuf - sets buf to null and freww
+ * handleBufandArgs - sets buf to null and freww
  * @buf: buffer from main
+ * @args: va_list from main
  * Return: void
  */
 void handleBufandArgs(char *buf, va_list args)

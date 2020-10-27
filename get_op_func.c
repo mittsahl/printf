@@ -10,24 +10,24 @@
 char *(*get_op_func(const char s))(va_list)
 {
 	funcStruct array[] = {
-	{"s", op_string},
-	{"i", op_int},
-	{"d", op_int},
-	{"u", op_unsignedInt}, 
-	{"o", op_octal}, 
-	{"X", op_unsignedHexCap},
-	{"x", op_unsignedHex},
-	{"R", op_rot13},
-	{"c", op_char},
-	{"p", op_pointer}, 
-	{"r", op_reverse},
-	{"%", op_percent},
-	{NULL, NULL}
+		{"s", op_string},
+		{"i", op_int},
+		{"d", op_int},
+		{"u", op_unsignedInt},
+		{"o", op_octal},
+		{"X", op_unsignedHexCap},
+		{"x", op_unsignedHex},
+		{"R", op_rot13},
+		{"c", op_char},
+		{"p", op_pointer},
+		{"r", op_reverse},
+		{"%", op_percent},
+		{NULL, NULL}
 	};
 
 
 	int i = 0;
-	
+
 	while (*(array + i)->letter)
 	{
 		if (*(array + i)->letter == s)

@@ -56,21 +56,21 @@ void _puts(char *str)
 
 int _strlen(char *s)
 {
-        int length;
-        char *start = s;
+	int length;
+	char *start = s;
 
-        for (length = 0; start[length] != '\0'; length++)
-                ;
-        return (length);
+	for (length = 0; start[length] != '\0'; length++)
+		;
+	return (length);
 }
 
 
 /**
-* str_concat - concatenates two strings
-* @s1: string from main
-* @s2: string from main
-* Return: if failure NULL else new string
-*/
+ * str_concat - concatenates two strings
+ * @s1: string from main
+ * @s2: string from main
+ * Return: if failure NULL else new string
+ */
 
 char *str_concat(char *s1, char *s2)
 {
@@ -90,103 +90,4 @@ char *str_concat(char *s1, char *s2)
 	_strcpy(concat, s1);
 	_strcpy(middle, s2);
 	return (concat);
-}
-
-char* itoa(int num, int base)
-{
-        static char buf[16] = {0};
-        int a = 30;
-
-        if (num > 0)
-	{
-		for(; (num && a) > 0; --a, num /= base)
-        	{
-                	//Will output the right symbol at given base
-                	buf[a] = "0123456789ABCDEF" [num % base];
-        	}
-	}
-        if (num < 0)
-	{
-		for(; (num < 0 && a > 0); --a, num /= base)
-        	{
-                	//Will output the right symbol at given base
-                	buf[a] = "0123456789ABCDEF" [(num % base) * -1];
-        	}
-		buf[a] = '-';
-		a--;
-	}
-	return &buf[a + 1];
-}
-char* utoa(unsigned int num, unsigned int base)
-{
-        static char buf[16] = {0};
-        int a = 30;
-
-        if (num > 0)
-	{
-		for(; (num && a) > 0; --a, num /= base)
-        	{
-                	//Will output the right symbol at given base
-                	buf[a] = "0123456789abcdef" [num % base];
-        	}
-	}
-	return &buf[a + 1];
-}
-
-
-char* ultoa(unsigned long int num, unsigned long int base)
-{
-        static char buf[16] = {0};
-        int a = 30;
-
-        if (num > 0)
-	{
-		for(; (num && a) > 0; --a, num /= base)
-        	{
-                	//Will output the right symbol at given base
-                	buf[a] = "0123456789abcdef" [num % base];
-        	}
-	}
-	return &buf[a + 1];
-}	
-char *utoaCap(unsigned int num, unsigned int base)
-{
-        static char buf[16] = {0};
-        int a = 30;
-
-        if (num > 0)
-	{
-		for(; (num && a) > 0; --a, num /= base)
-        	{
-                	//Will output the right symbol at given base
-                	buf[a] = "0123456789ABCDEF" [num % base];
-        	}
-	}
-	return &buf[a + 1];
-}
-
-/**
-*rot13 - encode in rot3
-*Return: rot13'd string
-*@a: string
-*/
-char *rot13(char *a)
-{
-	int i = 0, j;
-	char *string1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char *string2= "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-
-	while (*(a + i) != 0)
-	{
-		for (j = 0; j < 52; j++)
-		{
-			if (a[i] == string1[j])
-			{
-				a[i] = string2[j];
-				break;
-			}
-		}
-		i++;
-	}
-	return (a);
 }

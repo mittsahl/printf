@@ -1,5 +1,9 @@
 #include "holberton.h"
 #include <stdio.h>
+/**
+ * main - testing
+ * Return: void
+ */
 int main(void)
 {
 	int num = 18273748;
@@ -7,6 +11,7 @@ int main(void)
 	int *pointer = &num;
 	char *s = "Holberton";
 	char c = 'd';
+
 	_printf("%r\n\n", "Reverse this string");
 	_printf("Testing : Testing\n");
 	printf("Expected: Testing\n\n");
@@ -35,7 +40,7 @@ int main(void)
 	_printf("Testing : Percent: %%\n");
 	printf("Expected: Percent: %%\n\n");
 	_printf("Testing : %s %p %x %X %d\n", s, &num, num, num, neg);
-	 printf("Expected: %s %p %x %X %d\n\n", s, (void *)&num, num, num, neg);
+	printf("Expected: %s %p %x %X %d\n\n", s, (void *)&num, num, num, neg);
 	_printf("%R\n", "string");
-	 return (0);
+	return (0);
 }

@@ -73,8 +73,8 @@ char *op_pointer(va_list args)
  */
 char *op_percent(va_list args)
 {
-	args = args;
 	char *string = "%";
 
+	args = args;
 	return (string);
 }

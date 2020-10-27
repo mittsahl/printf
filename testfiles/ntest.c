@@ -15,7 +15,7 @@ int main(void)
 	printf("Expect: %d, %d,\n\n", min, max);
 	_printf("Test : %i, %i\n", min, max);
 	printf("Expect: %i, %i\n", min, max);
-	
+
 
 
 	return (0);

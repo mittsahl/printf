@@ -51,7 +51,7 @@ void rev_string(char *s)
  * @buf: buffer from main
  * Return: void
  */
-void handleBuf(char *buf)
+void handleBufandArgs(char *buf, va_list args)
 {
 	int bufPos = 0;
 
@@ -61,4 +61,5 @@ void handleBuf(char *buf)
 		bufPos++;
 	}
 	free(buf);
+	va_end(args);
 }

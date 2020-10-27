@@ -15,3 +15,16 @@ char *op_rot13(va_list args)
 	rot13(str);
 	return (str);
 }
+
+/**
+ * op_binary - takes va_list and returns bianry string
+ * @args: argslist from function
+ * Return: binary string
+ */
+char *op_binary(va_list args)
+{
+	unsigned int num = va_arg(args, unsigned int);
+	char *string = utoa(num, 2);
+
+	return (string);
+}

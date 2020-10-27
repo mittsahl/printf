@@ -32,7 +32,7 @@ char *itoa(int num, int base)
  */
 char *utoa(unsigned int num, unsigned int base)
 {
-	static char buf[16] = {0};
+	static char buf[32] = {0};
 	int a = 30;
 
 	if (num > 0)

@@ -45,4 +45,5 @@ char *op_char(va_list args);
 char *rot13(char *a);
 char *op_rot13(va_list args);
 void handleBufandArgs(char *buf, va_list args);
+char *op_binary(va_list args);
 #endif

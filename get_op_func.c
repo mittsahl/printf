@@ -21,6 +21,7 @@ char *(*get_op_func(const char s))(va_list)
 		{"c", op_char},
 		{"p", op_pointer},
 		{"r", op_reverse},
+		{"b", op_binary},
 		{"%", op_percent},
 		{NULL, NULL}
 	};

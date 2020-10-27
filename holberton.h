@@ -4,7 +4,6 @@
 #include <unistd.h>
 #include <stdarg.h>
 #include <stdlib.h>
-#include <limits.h>
 
 #define MAX_BUF_SIZE 1024
 

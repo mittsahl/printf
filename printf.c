@@ -42,6 +42,6 @@ int _printf(const char *format, ...)
 	}		
 	free(buf);
         va_end(args);
-        return (0);
+        return (length);
 }
 

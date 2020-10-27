@@ -8,10 +8,7 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i = 0;
-	int j = 0;
-	int bufRst = 0;
-	int length = 0;
+	int i, j, length = 0;
 	char *str;
 	char *(*function)(va_list);
 	char *buf = malloc(MAX_BUF_SIZE);
@@ -37,12 +34,7 @@ int _printf(const char *format, ...)
 	}
 	length = _strlen(buf);
 	write(1, buf, length);
-	while (bufRst < 1024)
-	{
-		buf[bufRst] = '\0';
-		bufRst++;
-	}
-	free(buf);
+	handleBuf(buf);
 	va_end(args);
 	return (length);
 }

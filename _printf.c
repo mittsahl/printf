@@ -2,7 +2,6 @@
 /**
  * _printf - should print like stdio printf
  * @format: asdf
- *
  * Return: string
  */
 int _printf(const char *format, ...)
@@ -13,10 +12,12 @@ int _printf(const char *format, ...)
 	char *(*function)(va_list);
 	char *buf = malloc(MAX_BUF_SIZE);
 
+	if (format == NULL)
+		return (-1);
 	va_start(args, format);
 	if (args == NULL)
 		return (-1);
-	for (i = 0; format[i] != '\0'; i++)
+	for (i = 0, j = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
 			buf[j] = format[i];
@@ -38,3 +39,4 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (length);
 }
+

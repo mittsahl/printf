@@ -35,7 +35,7 @@ A function producing an output based on the given format specifiers
 
 <br>
 
-Here are all the functions we used in this project:
+### Here are all the files we used in this project:
 
 ### helpers.c
 - _putchar
